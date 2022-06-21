@@ -26,7 +26,7 @@ class ShopLoginScreen extends StatelessWidget {
               CacheHelper.saveData(
                       key: 'token', value: state.loginModel.data!.token)
                   .then((value) {
-                navigateAndFinish(context, ShopLayout());
+                navigateAndFinish(context, const ShopLayout());
               });
             } else {
               print(state.loginModel.message);
@@ -61,7 +61,7 @@ class ShopLoginScreen extends StatelessWidget {
                               .bodyText1
                               ?.copyWith(color: Colors.grey),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         DefaultFormFeild(
@@ -75,7 +75,7 @@ class ShopLoginScreen extends StatelessWidget {
                           label: 'Email Address',
                           prefix: Icons.email_outlined,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 15.0,
                         ),
                         DefaultFormFeild(
@@ -125,7 +125,7 @@ class ShopLoginScreen extends StatelessWidget {
                                   isUppercase: true,
                                 ),
                             fallback: (context) =>
-                                Center(child: CircularProgressIndicator())),
+                                const Center(child: CircularProgressIndicator())),
                         const SizedBox(
                           height: 15,
                         ),
@@ -135,7 +135,7 @@ class ShopLoginScreen extends StatelessWidget {
                             const Text('Don\'t have an account ?'),
                             DefaultTextButton(
                                 function: () {
-                                  navigateTo(context, ShopRegisterScreen());
+                                  navigateTo(context, const ShopRegisterScreen());
                                 },
                                 text: 'register'),
                           ],

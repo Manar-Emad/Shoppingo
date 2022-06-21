@@ -1,9 +1,9 @@
 class LoginModel {
-  bool? status;
+  late final bool status;
   String? message;
   UserData? data;
 
-  LoginModel({this.status, this.message, this.data});
+  LoginModel({required this.status, this.message, this.data});
 
   LoginModel.fromJson(Map<String, dynamic> json) {
     status = json['status'];

@@ -19,21 +19,21 @@ class ShopLayout extends StatelessWidget {
           appBar: AppBar(
             actions: [
               IconButton(
-                icon: Icon(Icons.search),
-                onPressed: (){navigateTo(context, SearchScreen());}
+                icon: const Icon(Icons.search),
+                onPressed: (){navigateTo(context, const SearchScreen());}
               ),
             ],
-            title: Text('Salla'),
+            title: const Text('Salla'),
           ),
         body: cubit.bottomScreens[cubit.currentIndex],
           bottomNavigationBar: BottomNavigationBar(
             onTap: (index){cubit.changeBottom(index);},
             currentIndex: cubit.currentIndex,
-            items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home' ),
-            BottomNavigationBarItem(icon: Icon(Icons.apps),label: 'Categories' ),
-            BottomNavigationBarItem(icon: Icon(Icons.favorite) ,label: 'Favourities'),
-            BottomNavigationBarItem(icon: Icon(Icons.settings),label: 'Settings' ),
+            items:const [
+             BottomNavigationBarItem(icon: const Icon(Icons.home),label: 'Home' ),
+             BottomNavigationBarItem(icon: const Icon(Icons.apps),label: 'Categories' ),
+             BottomNavigationBarItem(icon: const Icon(Icons.favorite) ,label: 'Favourities'),
+             BottomNavigationBarItem(icon: const Icon(Icons.settings),label: 'Settings' ),
           ],),
         );},);
   }

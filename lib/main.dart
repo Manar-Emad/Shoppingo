@@ -61,7 +61,8 @@ class MyApp extends StatelessWidget {
         //       ..getSports()
         //       ..getScience()),
         BlocProvider(
-          create: (context) => AppCubit()..changeAppMode(fromShared: isDark),
+          create: (context) => AppCubit()
+            ..changeAppMode(fromShared: isDark),
         ),
         BlocProvider(
           create: (context) => ShopCubit()..getHomeData()..getCategories(),
